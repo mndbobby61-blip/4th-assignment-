@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#f8fafc]">
+        <header class="w-[80%] mx-auto">
+        <h1 class="text-2xl font-bold text-black my-6">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="bg-white p-4">
+                <p>Total</p>
+                <p id="total" class="font-bold">0</p>
+            </div>
+            <div class="bg-white p-4">
+                <p>Interview</p>
+                <p id="interviewcount" class="text-green-500 font-bold">0</p>
+            </div>
+            <div class="bg-white p-4">
+                <p>Rejected</p>
+                <p id="rejectedcount" class="text-red-500 font-bold">0</p>
+            </div>
+        </div>
+    </header>
+    <hr class="my-5 text-[#e6e7e9] mx-23">
+    <main class="w-[80%] mx-auto">
+            <div class="flex justify-between mb-6">
+            <div><h3 class="font-bold">Available Jobs</h3></div>
+            <div><p id="total-again" class="text-gray-400">0 jobs</p></div>
+        </div>
+        <div class="mb-4">
+            <button onclick="toggleStyle('all-filter-btn')" class="bg-sky-500 text-white font-semibold px-10 py-2" id="all-filter-btn">All</button>
+            <button onclick="toggleStyle('interview-filter-btn')" class="bg-white font-semibold px-10 py-2" id="interview-filter-btn">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" class="bg-white font-semibold px-10 py-2" id="rejected-filter-btn">Rejected</button>
+        </div>
+
+        <section class="text-center">
+            <div class="bg-white p-24">
+                <img class="inline-grid" src="image/jobs.png" alt="">
+                <p class="font-semibold">No jobs available</p>
+                <p>Check back soon for new job opportunities</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
